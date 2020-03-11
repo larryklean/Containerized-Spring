@@ -1,0 +1,26 @@
+spring:
+  profiles: local
+
+  datasource:
+    url: jdbc:mysql://containerization_database_1:3306/test-db
+    username: snicol
+    password: Password1
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+  session:
+    store-type: redis
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/database/changelogs/master-changelog.yml
+
+  cache:
+    type: redis

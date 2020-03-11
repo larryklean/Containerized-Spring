@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: database/changelogs/changes/changelog-0.0.1.yml
