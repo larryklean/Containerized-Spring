@@ -2,8 +2,8 @@ spring:
   profiles: local
 
   datasource:
-    url: jdbc:mysql://containerization_database_1:3306/test-db
-    username: snicol
+    url: jdbc:mysql://mysql:3306/test-db
+    username: nicol
     password: Password1
 
   jpa:

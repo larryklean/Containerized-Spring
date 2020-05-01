@@ -2,6 +2,7 @@ version: '3'
 
 services:
   backend:
+    container_name: backend
     image: maven:3.6.3-jdk-8
     working_dir: /app
     volumes:
@@ -19,12 +20,13 @@ services:
       - redis
 
   database:
+    container_name: mysql
     image: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: test-db
-      MYSQL_USER: snicol
+      MYSQL_USER: nicol
       MYSQL_PASSWORD: Password1
     ports:
       - 3306:3306
@@ -32,6 +34,7 @@ services:
       - db_data:/var/lib/mysql
 
   redis:
+    container_name: redis
     image: redis
     ports:
       - 6379:6379
